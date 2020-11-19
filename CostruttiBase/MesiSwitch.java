@@ -1,10 +1,15 @@
+/*Scrivere un programma che dato un numero che rappresenta un mese
+stampa a video i mesi dell'anno rimanenti
+ */
+
 import java.util.Scanner;
 
 public class MesiSwitch {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Inserire un numero: ");
         int month = sc.nextInt();
-        
+
         switch (month) {
             case 1:
                 System.out.println("January");
