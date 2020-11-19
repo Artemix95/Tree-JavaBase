@@ -19,6 +19,8 @@ public class Array {
         sc.close();
         System.out.println("Array riempito dall'utente: " + Arrays.toString(array));
 
+
+        //array generato casualmente
         int[] array2 = new int[5];
         Random r = new Random();
         for (int i=0; i<array2.length;i++) {
