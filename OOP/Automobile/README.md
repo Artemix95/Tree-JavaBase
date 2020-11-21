@@ -1,4 +1,5 @@
-# Automobile
+# Automobile 
+<img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/whatsapp/268/automobile_1f697.png" class="left">
 
 Modellare una classe Automobile che abbia come attributi:
 
