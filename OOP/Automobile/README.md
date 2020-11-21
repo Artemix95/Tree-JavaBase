@@ -1,4 +1,4 @@
-# Automobile 🚗
+# Automobile 
 
 Modellare una classe Automobile che abbia come attributi:
 
