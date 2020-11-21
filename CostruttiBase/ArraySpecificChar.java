@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class ArraySpecificChar {
     public static void main(String[] args) {
+
         Random rnd = new Random();
         char[] array = new char[50];
         for (int i = 0; i < array.length; i++) {
@@ -26,5 +27,6 @@ public class ArraySpecificChar {
         } else {
             System.out.println("Il valore non è presente");
         }
+
     }
 }
