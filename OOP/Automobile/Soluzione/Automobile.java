@@ -3,9 +3,7 @@ package automobile;
 public class Automobile {
     private String modello;
     private String targa;
-
-
-    private double velocità;
+    private double velocità; //k/h
     private int marcia;
 
 
@@ -39,7 +37,7 @@ public class Automobile {
     }
 
     public boolean decrementaVelocità(double velocità) {
-        if (this.velocità - velocità < 0) {
+        if (this.velocità - velocità < -50) {
             return false;
         }
         this.velocità -= velocità;
@@ -69,7 +67,7 @@ public class Automobile {
     }
 
 
-    public boolean setTarga(String targa) {
+    private boolean setTarga(String targa) {
         if (targa.length() != 7) {
             return false;
         }
