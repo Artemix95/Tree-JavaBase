@@ -1,17 +1,23 @@
-# Automobile 
+# Caldaia
 
-Modellare una classe Automobile che abbia come attributi:
+Scrivere una classe per modellare una caldaia: la caldaia può essere accesa/spenta; salva la temperatura dell'acqua.
 
-- modello
+Lo stato iniziale è spenta (25°)
 
-- targa
+Creare i metodi per:
 
-- velocità
+- accendere la caldaia
 
-- marcia
+- spegnere la caldaia
 
-La targa deve contenere esattamente 7 caratteri:
-I primi e gli ultimi 2 devono essere lettere maiuscole. I tre caratteri al centro devono essere numeri
+- aumentare la temperatura (definire più metodi)
 
-Deve esserci la possibilità di aumentare e decrementare la velocità,
-e di aumentare o decrementare la marcia.
+- diminuire la temperatura (definire più metodi)
+
+# Caldaia A
+
+Aggiungere un costruttoer con un parametro booleano:
+* se true, la caldaia è accesa
+* se false, la caldaia è spenta
+
+Nota: non devo perdere il costruttore di default. Deve essere ancora possibile creare una caldaia senza specificare alcun parametro.
