@@ -14,19 +14,12 @@ class ArrayRemoveElement {
                 if (arr[i] != arr[0] && arr[i - 1] == n) { //controlla che non sia in prima posizione e che il valore precedente sia uguale a quello da cancellare
                     i--;
                 }
-
-                for (int j = i; j < arr.length-1; j++) { //da quel valore in poi sposta tutti i valori di un posto a sx e lascia l'ultimo a zero
+                for (int j = i; j < arr.length - 1; j++) { //da quel valore in poi sposta tutti i valori di un posto a sx e lascia l'ultimo a zero
                     arr[j] = arr[j + 1];
                     arr[j + 1] = 0;
-
                 }
-
             }
-
         }
-
-
         System.out.println(Arrays.toString(arr));
-
     }
 }
