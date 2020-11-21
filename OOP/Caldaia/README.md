@@ -16,7 +16,7 @@ Creare i metodi per:
 
 # Caldaia A
 
-Aggiungere un costruttoer con un parametro booleano:
+Aggiungere un costruttore con un parametro booleano:
 * se true, la caldaia è accesa
 * se false, la caldaia è spenta
 
