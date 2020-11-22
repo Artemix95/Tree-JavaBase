@@ -45,4 +45,9 @@ public class Tandem extends Bicicletta {
     enum statoLuce {
         ACCESA, SPENTA;
     }
+    public void stampaSpecifiche() {
+        super.stampaSpecifiche();
+        System.out.println("Ha il campanello? " + hasLight);
+        System.out.println("Ha la luce? " + hasBikeBell);
+    }
 }

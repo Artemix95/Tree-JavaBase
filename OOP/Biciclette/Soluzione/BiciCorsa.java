@@ -15,4 +15,11 @@ public class BiciCorsa extends Bicicletta {
     public String getModello() {
         return modello;
     }
+
+    public void stampaSepcifiche() {
+        super.stampaSpecifiche();
+        System.out.println("Numero ammortizzatori: " + getAmmortizzatori());
+        System.out.println("Modello: " + getModello());
+    }
+
 }

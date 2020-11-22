@@ -41,4 +41,8 @@ public abstract class Bicicletta {
     public void setVelocità(int velocità) {
         this.velocità = velocità;
     }
+    public void stampaSpecifiche() {
+        System.out.println("Numero ruote: "+getNumeroRuote());
+
+    }
 }

@@ -22,4 +22,9 @@ public class MountainBike extends Bicicletta {
         this.marcia=marcia;
         return true;
     }
+
+    public void stampaSpecifiche() {
+        super.stampaSpecifiche();
+        System.out.println("Colore: " + getColore());
+    }
 }

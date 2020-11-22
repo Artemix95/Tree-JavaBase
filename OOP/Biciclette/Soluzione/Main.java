@@ -18,5 +18,11 @@ public class Main {
         } else {
             System.out.println("Non c'è il campanello");
         }
+
+        BiciCorsa corsa = new BiciCorsa(4, "Tarmac SL7");
+        System.out.println();
+        corsa.stampaSepcifiche();
+        System.out.println();
+        bici1.stampaSpecifiche();
     }
 }
