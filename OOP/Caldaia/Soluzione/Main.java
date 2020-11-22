@@ -1,40 +1,63 @@
 package caldaia;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Caldaia caldaia1 = new Caldaia();
+        Caldaia caldaia = new Caldaia();
 
-        System.out.println(caldaia1.getStatoCaldaia());
-        caldaia1.stampaStatoCaldaia();
-
-        caldaia1.accendi();
-        System.out.println(caldaia1.getStatoCaldaia());
-        caldaia1.stampaStatoCaldaia();
-
-
-        caldaia1.aumentaTemp();
-        System.out.println(caldaia1.getTempAcqua());
-
-        caldaia1.decrementaTemp();
-        System.out.println(caldaia1.getTempAcqua());
-
-        caldaia1.aumentaTemp(33);
-        System.out.println(caldaia1.getTempAcqua()); //non supera i 55 gradi
-        caldaia1.decrementaTemp(40);
-
-        caldaia1.spegni(); //se non viene riaccesa non sale la temperatura
-        System.out.println(caldaia1.getTempAcqua()); //non va sotto i 25 gradi
-        caldaia1.aumentaTemp(10.2);
-        System.out.println(caldaia1.getTempAcqua());
-        caldaia1.decrementaTemp(10.4);
-        System.out.println(caldaia1.getTempAcqua());
-        caldaia1.stampaStatoCaldaia();
+        String comando = "";
+        System.out.println("Accendi la caldaia (ON)");
+        System.out.println("Spegni la caldaia (OFF)");
+        System.out.println("Imposta la temperatura (SET)");
+        System.out.println("Vedi la temperatura corrente (GET)");
+        System.out.println("Controlla lo stato della caldaia (STATO)");
+        System.out.println("ESC per uscire");
 
 
-        caldaia1.accendi();
-        caldaia1.stampaStatoCaldaia();
-        caldaia1.setTemp(45.8);
-        System.out.println(caldaia1.getTempAcqua());
+        while (!comando.equals("ESC")) {
+
+            Scanner sc = new Scanner(System.in);
+
+            comando = sc.nextLine();
+
+            comando = comando.toUpperCase();
+
+            switch (comando) {
+                case "ON":
+                    caldaia.accendi();
+                    System.out.println("La caldaia è accesa");
+
+                    break;
+                case "OFF":
+                    caldaia.spegni();
+                    System.out.println("La caldaia è spenta");
+
+                    break;
+                case "SET":
+                    System.out.println("Inserire la temperatura desiderata: ");
+
+                    double set = Double.parseDouble(sc.nextLine());
+                    if (caldaia.setTemp(set)) {
+                        System.out.println("Temperatura impostata");
+                    } else {
+                        System.out.println("Non è possibile settare la temperatura");
+                    }
+
+                    break;
+                case "GET":
+                    System.out.println(caldaia.getTempAcqua());
+                    break;
+
+                case "STATO":
+                    caldaia.stampaStatoCaldaia();
+                    break;
+
+                case "ESC":
+                    sc.close();
+            }
+        }
+
 
     }
 }
